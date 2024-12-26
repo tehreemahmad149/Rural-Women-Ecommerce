@@ -10,7 +10,7 @@ const generateToken = (id) => {
 
 // Register User
 const registerUser = async (req, res) => {
-  const { name, email, password, role } = req.body;
+  const { name, email, password, role, story } = req.body;
   console.log('JWT_SECRET:', JWT_SECRET);
 
   try {
@@ -19,13 +19,14 @@ const registerUser = async (req, res) => {
       return res.status(400).json({ message: 'User already exists' });
     }
 
-    const user = await User.create({ name, email, password, role });
+    const user = await User.create({ name, email, password, role, story });
     if (user) {
       res.status(201).json({
         _id: user.id,
         name: user.name,
         email: user.email,
         role: user.role,
+        story: user.story,
         token: generateToken(user.id),
       });
     } else {
