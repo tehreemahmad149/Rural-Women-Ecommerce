@@ -4,6 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const connectDB = require('./config/db');
 const tutorialsRoutes = require('./routes/tutorialsRoutes');
+const mentorsRoutes = require('./routes/mentorsRoutes'); // Add this line
 
 dotenv.config();
 connectDB();
@@ -15,6 +16,7 @@ app.use(bodyParser.json());
 
 // Routes
 app.use('/api', tutorialsRoutes);
+app.use('/api', mentorsRoutes); // Add this line
 
 const PORT = process.env.PORT || 5000;
 
