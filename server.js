@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const connectDB = require('./config/db');
-const topicRoutes = require('./routes/topicRoutes');
+const tutorialsRoutes = require('./routes/tutorialsRoutes');
 
 dotenv.config();
 connectDB();
@@ -14,7 +14,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Routes
-app.use('/api', topicRoutes);
+app.use('/api', tutorialsRoutes);
 
 const PORT = process.env.PORT || 5000;
 
