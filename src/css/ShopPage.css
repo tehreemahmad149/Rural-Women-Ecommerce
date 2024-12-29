@@ -1,0 +1,112 @@
+/* ShopPage.css */
+.shop-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Georgia', serif;
+    background-color: #f7f3e9;
+    padding: 20px;
+    height: 100vh;
+  }
+  .ShopPage-button{
+    background-color:#8b4513;
+    margin-top: 1rem;
+    color: white;
+  }
+  .ShopPage-button:hover {
+    background-color: #6b4226;
+  }
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #d2b48c;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .product-card h3 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    margin-bottom: 1rem;
+  }
+  
+  .product-card p {
+    font-size: 1.2rem;
+    color: #6b4226;
+  }
+  
+  .product-card button {
+    background-color: #8b4513;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-self: flex-end;
+    margin: 0.2rem;
+    padding: 0.4rem;
+  }
+  
+  .product-card button:hover {
+    background-color: #6b4226;
+  }
+  
+  .cart {
+    position: fixed;
+    top: 20%;
+    right: 0;
+    width: 300px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #d2b48c;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart h2 {
+    font-size: 2rem;
+    color: #8b4513;
+    margin-bottom: 1rem;
+  }
+  
+  .cart ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cart li {
+    margin-bottom: 1rem;
+  }
+  
+  .cart button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cart button:hover {
+    background-color: #6b4226;
+  }
+  
+  .product-img {
+    object-fit: cover;
+    height: 35%;
+    width: 60%;
+  }

@@ -1,0 +1,83 @@
+/* TutorialsPage.css */
+.tutorials-page {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f3e9;
+    min-height: 100vh;
+  }
+  
+  .tutorials-page h1 {
+    text-align: center;
+    color: #884513;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+  }
+  
+  .tutorials-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .tutorial-item {
+    margin-bottom: 15px;
+  }
+  
+  .tutorial-button {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    background-color:#8b4513;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .tutorial-button:hover {
+    background-color: #6b4226;
+    transform: scale(1.02);
+  }
+  
+  .tutorial-button.active {
+    background-color: #005bb5;
+  }
+  
+  .links-list {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  
+  .links-list.active {
+    opacity: 1;
+    max-height: 300px;
+  }
+  
+  .link-item {
+    margin-bottom: 8px;
+    font-size: 1rem;
+  }
+  
+  .link-item a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .link-item a:hover {
+    text-decoration: underline;
+  }
+  

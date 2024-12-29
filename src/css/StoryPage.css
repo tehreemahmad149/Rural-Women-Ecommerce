@@ -1,0 +1,32 @@
+/* StoryPage.css */
+.story-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f7f3e9;
+    font-family: 'Georgia', serif;
+    padding: 20px;
+  }
+  
+  .story-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border: 1px solid #d2b48c;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .story-container h2 {
+    font-size: 2rem;
+    color: #8b4513;
+    margin-bottom: 1rem;
+  }
+  
+  .story-container p {
+    font-size: 1.2rem;
+    color: #6b4226;
+  }
+  

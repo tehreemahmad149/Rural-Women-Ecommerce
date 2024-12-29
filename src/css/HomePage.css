@@ -1,0 +1,50 @@
+/* HomePage.css */
+
+.homepage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f7f3e9;
+    font-family: 'Georgia', serif;
+    background-image: url(../../public/home-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .main-content {
+    text-align: center;
+    background: #ffffff;
+    padding: 2rem;
+    border: 1px solid #d2b48c;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-content h1 {
+    font-size: 2.5rem;
+    color: #8b4513;
+    margin-bottom: 1rem;
+  }
+  
+  .main-content p {
+    font-size: 1.2rem;
+    color: #6b4226;
+    margin-bottom: 1.5rem;
+  }
+  
+  .login-link {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .login-link:hover {
+    background-color: #6b4226;
+    color: white;
+  }
+  
