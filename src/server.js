@@ -5,9 +5,12 @@ const cors = require('cors');
 const productRoutes = require('./routes/productRoutes'); // Import the routes file
 const tutorialsRoutes = require('./routes/tutorialsRoutes');
 const mentorsRoutes = require('./routes/mentorsRoutes'); // Add this line
+const { activeTokens } = require("./controllers/userController");
 
 
 const app = express();
+
+activeTokens.clear();
 
 // Middleware to parse JSON request bodies
 app.use(cors());
