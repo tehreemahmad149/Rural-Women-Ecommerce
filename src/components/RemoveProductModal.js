@@ -35,6 +35,7 @@ const RemoveProductModal = ({ onClose }) => {
       // Refresh the products after successful deletion
       setUserProducts(prevProducts => prevProducts.filter(product => product._id !== productId));
       alert('Product removed successfully');
+      window.location.reload();
     } catch (error) {
       console.error('Error removing product', error);
       alert('Failed to remove product');

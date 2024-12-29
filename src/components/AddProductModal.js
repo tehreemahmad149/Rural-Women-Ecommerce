@@ -44,6 +44,7 @@ function AddProductModal({ onClose }) {
       );
       alert('Product added successfully');
       onClose();
+      window.location.reload();
     } catch (error) {
       console.error(error);
       alert('Failed to add product');

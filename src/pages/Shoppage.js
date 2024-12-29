@@ -73,7 +73,7 @@ function ShopPage() {
         <h3>{product.name}</h3>
         <p>{product.description}</p>
         <img className='product-img' src={product.image} alt={product.name} /> {/* Use "image" as a URL */}
-        <p>${product.price}</p>
+        <p>Rs {product.price}</p>
         <button onClick={() => addToCart(product._id)}>Add to Cart</button>
         <Link to={`/story/${product._id}`}>
               <button>View Story</button>
@@ -115,7 +115,7 @@ function ShopPage() {
             </li>
           ))}
         </ul>
-        <h3>Total: ${getTotalPrice()}</h3>
+        <h3>Total: Rs{getTotalPrice()}</h3>
         <button>Checkout</button>
       </div>
     )}
