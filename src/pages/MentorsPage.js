@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../css/MentorsPage.css'; // Optional: Custom styling for the page
+import '../css/MentorsPage.css';
 
 function MentorsPage() {
-  const [mentors, setMentors] = useState([]); // To store all mentors
-  const [expandedMentor, setExpandedMentor] = useState(null); // To manage dropdown expansion
+  const [mentors, setMentors] = useState([]);
+  const [expandedMentor, setExpandedMentor] = useState(null);
 
   // Fetch all mentors on component mount
   useEffect(() => {
     axios.get('http://localhost:5000/api/mentors')
       .then(response => {
-        setMentors(response.data); // Assuming response is an array of mentor objects
+        setMentors(response.data);
       })
       .catch(error => console.log(error));
   }, []);

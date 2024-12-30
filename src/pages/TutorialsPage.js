@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../css/TutorialsPage.css'; // Updated styling
+import '../css/TutorialsPage.css';
 
 function TutorialsPage() {
-  const [tutorials, setTutorials] = useState([]); // To store all tutorial titles
-  const [selectedTutorial, setSelectedTutorial] = useState(null); // To store the title of the selected tutorial
-  const [links, setLinks] = useState([]); // To store the links for the selected tutorial
+  const [tutorials, setTutorials] = useState([]);
+  const [selectedTutorial, setSelectedTutorial] = useState(null);
+  const [links, setLinks] = useState([]);
 
   // Fetch all tutorial titles on component mount
   useEffect(() => {
     axios.get('http://localhost:5000/api/tutorials')
       .then(response => {
-        setTutorials(response.data); // Assuming response is an array of tutorials
+        setTutorials(response.data);
       })
       .catch(error => console.log(error));
   }, []);
@@ -27,7 +27,7 @@ function TutorialsPage() {
       axios.get(`http://localhost:5000/api/tutorials/${title}`)
         .then(response => {
           setSelectedTutorial(title);
-          setLinks(response.data); // Assuming response is an array of links
+          setLinks(response.data);
         })
         .catch(error => console.log(error));
     }

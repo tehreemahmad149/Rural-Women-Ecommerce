@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const productRoutes = require('./routes/productRoutes'); // Import the routes file
+const productRoutes = require('./routes/productRoutes'); 
 const tutorialsRoutes = require('./routes/tutorialsRoutes');
-const mentorsRoutes = require('./routes/mentorsRoutes'); // Add this line
+const mentorsRoutes = require('./routes/mentorsRoutes');
 const { activeTokens } = require("./controllers/userController");
 
 
@@ -14,8 +14,8 @@ activeTokens.clear();
 
 // Middleware to parse JSON request bodies
 app.use(cors());
-app.use(bodyParser.json({ limit: '50mb' })); // Increase the size limit to 50MB
-app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));  // For URL encoded data
+app.use(bodyParser.json({ limit: '50mb' })); 
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://admin:nustcloud@web-project.wxpjq.mongodb.net/?retryWrites=true&w=majority&appName=web-project')

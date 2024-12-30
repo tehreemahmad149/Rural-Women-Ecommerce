@@ -14,7 +14,7 @@ const getAllProducts = async (req, res) => {
 // Fetch products by the current user
 const getUserProducts = async (req, res) => {
   try {
-    const userId = req.user._id; // Assuming req.user contains authenticated user
+    const userId = req.user._id;
     const userProducts = await Product.find({ creator: userId });
     res.status(200).json({ success: true, data: userProducts });
   } catch (error) {
@@ -54,7 +54,7 @@ const getEntrepreneurStory = async (req, res) => {
 const addProduct = async (req, res) => {
   try {
     const { name, description, price, image } = req.body;
-    const creator = req.user._id; // Assuming the authenticated user is stored in req.user
+    const creator = req.user._id;
 
     // Validate input
     if (!name || !description || !price || !image) {
@@ -66,7 +66,7 @@ const addProduct = async (req, res) => {
       name,
       description,
       price,
-      image, // Base64 image received from frontend
+      image,
       creator,
     });
 
@@ -80,7 +80,7 @@ const addProduct = async (req, res) => {
 const removeProduct = async (req, res) => {
   try {
     const { productId } = req.params;
-    const userId = req.user._id; // Assuming the authenticated user is stored in req.user
+    const userId = req.user._id;
 
     // Find and delete the product
     const product = await Product.findOneAndDelete({ _id: productId, creator: userId });

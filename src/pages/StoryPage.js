@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom'; // To get the productId from the URL
-import '../css/StoryPage.css'; // Optional: Add styles for this page
+import { useParams } from 'react-router-dom';
+import '../css/StoryPage.css';
 
 // StoryPage component to show the user's story
 function StoryPage() {
-  const { productId } = useParams(); // Extract productId from the URL
+  const { productId } = useParams(); 
   const [story, setStory] = useState(null);
   const [entrepreneurName, setEntrepreneurName] = useState('');
 
@@ -16,7 +16,6 @@ function StoryPage() {
         console.log("response recieved from server");
         console.log(response.data);
         setStory(response.data.data.story);
-        // You can also assume that response.data contains the name of the entrepreneur
         setEntrepreneurName(response.data.data.name);
       })
       .catch(error => console.log(error));

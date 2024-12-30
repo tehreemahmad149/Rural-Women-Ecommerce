@@ -24,8 +24,8 @@ function ShopPage() {
   
     Promise.all([fetchUserRole, fetchProducts])
       .then(([userResponse, productsResponse]) => {
-        setUserRole(userResponse.data.role); // Set the user's role
-        setProducts(productsResponse.data.data); // Set the products list
+        setUserRole(userResponse.data.role); 
+        setProducts(productsResponse.data.data);
       })
       .catch(error => console.log('Error fetching data:', error));
   }, []);
@@ -33,15 +33,14 @@ function ShopPage() {
 
   const addToCart = (itemId) => {
     const product = products.find((prod) => prod._id === itemId); // Find the product details
-    if (!product) return; // Exit if product is not found (edge case)
+    if (!product) return; 
   
-    // Send request to backend to update cart (optional for persistence)
     axios.post('http://localhost:5000/api/items/cart', { itemId }, {
       headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}`, 'Content-Type': 'application/json' }
     })
     .then(() => {
       // Add the product to the cart state
-      setCart((prevCart) => [...prevCart, product]); // Add the product to the cart
+      setCart((prevCart) => [...prevCart, product]);
     })
     .catch((error) => console.log(error));
   };
@@ -93,7 +92,6 @@ function ShopPage() {
             Remove Products
           </button>
 
-          {/* Show RemoveProductModal when it's open */}
           {isRemoveProductModalOpen && (
             <RemoveProductModal onClose={() => setIsRemoveProductModalOpen(false)} />
           )}

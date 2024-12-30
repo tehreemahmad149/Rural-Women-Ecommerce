@@ -17,7 +17,6 @@ function LoginPage() {
     })
     .then((response) => {
       console.log('Login successful:', response.data);
-      // Assuming a JWT token is returned, you can save it here
       localStorage.setItem('token', response.data.token);
       navigate('/shop'); // Redirect to shop page after successful login
     })

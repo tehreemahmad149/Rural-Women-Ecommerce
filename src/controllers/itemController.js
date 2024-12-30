@@ -24,7 +24,6 @@ const addItemToCart = async (req, res) => {
   const userId = req.user.id;
 
   try {
-    // Find the item by ID
     const item = await Item.findById(itemId);
     if (!item) {
       return res.status(404).json({ message: 'Item not found' });
@@ -55,7 +54,6 @@ const addItemToCart = async (req, res) => {
 // Get items in the user's cart
 const getCartItems = async (req, res) => {
   try {
-    // Get the logged-in user's ID from the token
     const userId = req.user.id; // Ensure you're extracting user ID from JWT
     
     // Find the cart associated with the user
@@ -85,7 +83,7 @@ const removeItemFromCart = async (req, res) => {
       if (!cart) {
         return res.status(404).json({ message: 'Cart not found' });
       }
-      const itemIndex = cart.items.findIndex((id) => id.toString() === itemId);// Find the index of the item to remove
+      const itemIndex = cart.items.findIndex((id) => id.toString() === itemId);
       if (itemIndex === -1) {
         return res.status(404).json({ message: 'Item not found in cart' });
       }
